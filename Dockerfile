@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/xiaoyilin/alpine/alpine:latest
+FROM registry.cn-hangzhou.aliyuncs.com/xiaoyilin/alpine:latest
 RUN apk --update --no-cache add ca-certificates bash wget tzdata && \
         ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone  && \
         wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
